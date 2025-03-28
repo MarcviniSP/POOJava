@@ -42,6 +42,7 @@ public class Main {
    aluno.imprimirFicha();
    i++;
   }
+  Aluno.exibirTotalAlunos();
 
  }
 }
