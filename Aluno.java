@@ -1,18 +1,20 @@
 public class Aluno {
 
  String nome;
- int idade;
+ private int idade;
  boolean ativo;
- double[] notas;
+ private double[] notas;
+ private static int contador = 0;
  
  public Aluno(String nome) {
      this.nome = nome;
      ativo = true;
      notas = new double[3];
+     contador = contador + 1;
  }
  
  private void setNota(double nota, int index) {
-   if (n1 >= 0 && n1 <= 10) {
+   if (nota >= 0 && nota <= 10) {
      this.notas[index] = nota;
    } else {
      this.notas[index] = 0;
@@ -28,7 +30,6 @@ public class Aluno {
  public void setIdade(int idade) {
      if (idade >= 17) {
          this.idade = idade;
-         
      } else {
          this.idade = 17;
          System.out.println("Idade incorreta!");
@@ -70,5 +71,9 @@ public class Aluno {
   } else {
    System.out.println("Reprovado :(");
   }
+ }
+ 
+ public static void exibirTotalAlunos(){
+   System.out.println("Total de alunos criador: " + contador);
  }
 }
