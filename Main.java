@@ -27,9 +27,9 @@ public class Main {
 
    alunos[n].ativo = true;
 
-   double n1 = rand.nextInt(201)/10.0;
-   double n2 = rand.nextInt(201)/10.0;
-   double n3 = rand.nextInt(201)/10.0;
+   double n1 = rand.nextInt(101)/10.0;
+   double n2 = rand.nextInt(101)/10.0;
+   double n3 = rand.nextInt(101)/10.0;
    alunos[n].setNotas(n1, n2, n3);
 
   }
@@ -43,7 +43,7 @@ public class Main {
    i++;
   }
   Aluno.exibirTotalAlunos();
-
+  System.out.printf("Media Geral: %.2f", RelatorioTurma.mediaGeral(alunos));
  }
 }
  
